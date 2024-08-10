@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f7f7f7, #ececec);
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  position: relative;
+}
+
+svg {
+  position: absolute;
+  top: 3px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  background-color: #8093a6;
+  border-radius: 20px;
+}
+
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+.h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.faq-section {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.faq-section {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.faq-item input[type="checkbox"] {
+  display: none;
+}
+
+.faq-question {
+  display: flex;
+  padding: 15px;
+  background: #fafafa;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  transition: background 0.3s ease;
+  border-top: 1px solid #ddd;
+}
+
+.faq-question:hover {
+  background-color: #f0f0f0;
+}
+
+.faq-icon {
+  margin-left: auto;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-toggle:checked + .faq-question .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  text-align: left;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #fafafa;
+  padding: 0 15px;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+  max-height: 200px;
+  padding: 15px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.footer {
+  color: rgb(100, 100, 100);
+  padding: 20px 0;
+}
+
+.footer .container {
+  display: block;
+  overflow: hidden;
+}
+
+.footer-column {
+  width: 23%;
+  float: left;
+  margin-right: 2%;
+}
+
+.footer-column:last-child {
+  margin-right: 0;
+}
+
+.footer-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: grey;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #8093a6;
+}
+
+.footer-column form {
+  margin-bottom: 15px;
+}
+
+.footer-column input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.footer-column button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(128, 114, 114, 0.183);
+  color: grey;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-column button:hover {
+  background-color: #8093a6;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: grey;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #8093a6;
+}
+
+.footer-bottom {
+  color: #ddd;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .icons {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer-column {
+    width: 48%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+  }
+
+  .footer-column:last-child {
+    margin-right: 0;
+  }
+}
